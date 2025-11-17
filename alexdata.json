@@ -1,0 +1,10 @@
+{
+    "name": "Alex",
+    "age": 20,
+    "is_student": false,
+    "courses": [
+        "Microbiology",
+        "Science"
+    ],
+    "telephone": 2349126025482
+}

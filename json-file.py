@@ -9,6 +9,7 @@ data = {
     "telephone": 2347034834396,
 }
 
+
 # Define the filename
 filename = "data.json"
 
@@ -16,7 +17,7 @@ filename = "data.json"
 with open(filename, 'w') as file:
     json.dump(data, file, indent=4) # indent for human-readable output
 
-print(f"Data successfully stored in {filename}")
+
 
 try:
     # Open the file in read mode ('r') and use json.load() to read the data
@@ -31,3 +32,41 @@ except FileNotFoundError:
     print(f"Error: The file '{filename}' was not found.")
 except json.JSONDecodeError:
     print(f"Error: Failed to decode JSON from '{filename}'. The file might be malformed.")
+
+
+
+
+
+
+
+
+# Other Sample Python data
+alexdata = {
+    "name": "Alex",
+    "age": 20,
+    "is_student": False,
+    "courses": ["Microbiology", "Science"],
+    "telephone": 2349126025482,
+}
+
+filename2 = "alexdata.json"
+
+# Open the file in write mode ('w') and use json.dump() to write the data
+with open(filename2, 'w') as file:
+    json.dump(alexdata, file, indent=4) # indent for human-readable output
+
+print(f"Data successfully stored in {filename2}")
+
+try:
+    # Open the file in read mode ('r') and use json.load() to read the data
+    with open(filename2, 'r') as file:
+        loaded_data = json.load(file)
+
+    print(f"Data successfully loaded from {filename2}:")
+    print(loaded_data)
+    print(f"Type of loaded data: {type(loaded_data)}")
+
+except FileNotFoundError:
+    print(f"Error: The file '{filename2}' was not found.")
+except json.JSONDecodeError:
+    print(f"Error: Failed to decode JSON from '{filename2}'. The file might be malformed.")    
